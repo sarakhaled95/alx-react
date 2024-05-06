@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.1",
+    "eslint": "^9.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
     "image-webpack-loader": "^8.1.0",
@@ -19,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
