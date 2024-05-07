@@ -1,0 +1,34 @@
+.App {
+  height: 100vh;
+  max-width: 100vw;
+}
+
+.App-header img {
+    width: 200px;
+    height: 200px;
+}
+
+.App-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #ce4550;
+    border-bottom: 3px solid #ce4550;
+}
+
+.App-body {
+    font-size: 1rem;
+    padding: 2em;
+    height: 45%;
+    border-bottom: 3px solid #ce4550;
+}
+
+.App-footer {
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+form input {
+    margin: 10px;
+}
