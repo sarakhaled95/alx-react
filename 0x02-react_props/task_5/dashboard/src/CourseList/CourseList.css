@@ -23,3 +23,6 @@ table {
 tr:nth-child(2) {
     text-align: left;
 }
+thead {
+    text-align: center;
+}

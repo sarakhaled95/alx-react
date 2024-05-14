@@ -1,8 +1,7 @@
 import React from "react";
-import logo from "../assets/holberton-logo.jpg";
 import "./Login.css";
 
-export default function Login() {
+function Login() {
     return (
         <div className="App-body">
             <p>Login to access the full dashboard</p>
@@ -16,3 +15,5 @@ export default function Login() {
         </div>
     );
 }
+
+export default Login;
