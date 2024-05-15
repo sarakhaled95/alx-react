@@ -67,4 +67,32 @@ describe('App', () => {
             expect(wrapper.find('CourseList').length).toBe(1)
         })
     })
+    jest.mock('./logOut', () => jest.fn()); // Mock the logOut function
+
+    describe('App component', () => {
+        let mockLogOut;
+        beforeEach(() => {
+            mockLogOut = jest.fn();
+        });
+
+        it('should call logOut function and display alert on Ctrl+h press', () => {
+            const wrapper = shallow(<App logOut={mockLogOut} />);
+
+            // Simulate keydown event with Ctrl+h
+            wrapper.simulate('keydown', { ctrlKey: true, key: 'h' });
+
+            expect(mockLogOut).toHaveBeenCalledTimes(1);
+            expect(window.alert).toHaveBeenCalledWith('Logging you out');
+        });
+
+        it('should not call logOut function or display alert on other key presses', () => {
+            const wrapper = shallow(<App logOut={mockLogOut} />);
+
+            // Simulate keydown event with a different key
+            wrapper.simulate('keydown', { ctrlKey: true, key: 'j' });
+
+            expect(mockLogOut).not.toHaveBeenCalled();
+            expect(window.alert).not.toHaveBeenCalled();
+        });
+    });
 });
