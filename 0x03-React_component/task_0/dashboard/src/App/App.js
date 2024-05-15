@@ -30,7 +30,9 @@ class App extends Component {
                         <Header />
                     </div>
                     {this.props.isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
-                    <Footer />
+                    <div className="App-footer">
+                        <Footer />
+                    </div>
                 </div>
             </React.Fragment>
         );
