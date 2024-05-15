@@ -20,7 +20,7 @@ const listNotifications = [
     { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-function App(isLoggedIn) {
+function App({ isLoggedIn }) {
     return (
         <React.Fragment>
             <div className="App">
@@ -28,7 +28,7 @@ function App(isLoggedIn) {
                     <Notifications listNotifications={listNotifications} />
                     <Header />
                 </div>
-                {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login/>}
+                {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
                 <Footer />
             </div>
         </React.Fragment>
