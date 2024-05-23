@@ -1,0 +1,9 @@
+[data-notification-type="default"] {
+    color: blue;
+}
+
+[data="urgent"],
+[data-notification-type="urgent"],
+[data-urgent="true"] {
+    color: red;
+}
