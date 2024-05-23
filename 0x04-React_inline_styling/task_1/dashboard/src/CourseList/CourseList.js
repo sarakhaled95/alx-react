@@ -3,6 +3,7 @@ import CourseListRow from "./CourseListRow";
 import PropTypes from "prop-types";
 import CourseShape from "./CourseShape";
 import { StyleSheet, css } from "aphrodite";
+import './CourseList.css';
 
 function CourseList({ listCourses }) {
     return (
